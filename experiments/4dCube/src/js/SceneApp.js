@@ -25,6 +25,7 @@ const getMouse = function(e) {
 class SceneApp extends Scene {
 	constructor() {
 		super();
+    // set size
 		this.resize();
 		GL.enableAlphaBlending();
 		this.orbitalControl.rx.value = 0.3;

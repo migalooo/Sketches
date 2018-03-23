@@ -1,6 +1,6 @@
 // debug.js
 import dat from 'dat-gui';
-import Stats from 'stats.js';
+import Stats from 'stats.js'; // stats monitor https://github.com/mrdoob/stats.js
 import alfrid, { GL } from 'alfrid';
 
 console.log('Init GUI');

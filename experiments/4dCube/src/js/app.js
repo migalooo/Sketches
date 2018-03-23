@@ -1,5 +1,5 @@
 import '../scss/global.scss';
-import debugPolyfill from './debugPolyfill';
+import debugPolyfill from './debugPolyfill'; // check window.gui loaded
 import alfrid, { GL } from 'alfrid';
 import SceneApp from './SceneApp';
 import AssetsLoader from 'assets-loader';
@@ -25,9 +25,11 @@ window.params = {
 function _init() {
 
 	//	LOADING ASSETS
+  // note: loading assets form asset-list
 	if(assets.length > 0) {
 		document.body.classList.add('isLoading');
 
+    //note: may use promise rewrite assetsLoader
 		const loader = new AssetsLoader({
 			assets:assets
 		})
@@ -71,9 +73,11 @@ function _init3D() {
 	document.body.appendChild(canvas);
 
 	//	INIT 3D TOOL
+  //	set gl context
 	GL.init(canvas, {ignoreWebgl2:true});
 
 	//	INIT ASSETS
+  //	load assets
 	Assets.init();
 
 	//	CREATE SCENE

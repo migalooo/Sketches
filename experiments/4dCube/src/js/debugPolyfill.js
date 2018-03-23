@@ -2,7 +2,7 @@
 
 console.log('Debug Polyfill');
 
-if(!window.gui) {
+if (!window.gui) {
 	window.gui = {
 		add:()=>{
 
