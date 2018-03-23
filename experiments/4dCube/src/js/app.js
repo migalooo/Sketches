@@ -29,7 +29,7 @@ function _init() {
 	if(assets.length > 0) {
 		document.body.classList.add('isLoading');
 
-    //note: may use promise rewrite assetsLoader
+    // note: may use promise rewrite assetsLoader
 		const loader = new AssetsLoader({
 			assets:assets
 		})
@@ -50,6 +50,7 @@ function _init() {
 }
 
 
+// not: if has image assets
 function _onImageLoaded(o) {
 	//	ASSETS
 	console.log('Image Loaded : ', o);
@@ -74,6 +75,8 @@ function _init3D() {
 
 	//	INIT 3D TOOL
   //	set gl context
+
+  // note: init gl context use webgl api
 	GL.init(canvas, {ignoreWebgl2:true});
 
 	//	INIT ASSETS

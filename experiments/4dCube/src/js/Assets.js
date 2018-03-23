@@ -17,7 +17,7 @@ const getExtension = function(mFile) {
 
 Assets.init = function() {
 	let hdrCubemaps = {};
-	_assets = assetsToLoad.map((o)=> {
+	_assets = assetsToLoad.map((o)=> { // note: image source load from asset-list
 		const ext = getExtension(o.url);
 		const file = getAsset(o.id);
 		let texture;

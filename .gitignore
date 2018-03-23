@@ -1,6 +1,9 @@
 node_modules
+!node_modules/alfrid
+
 .DS_Store
 .sass-cache
 build
 experiments/TextureProj/npm-debug.log
 illum
+*.swp
