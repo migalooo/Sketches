@@ -1,5 +1,4 @@
-node_modules
-!node_modules/alfrid
+node_modules/
 
 .DS_Store
 .sass-cache

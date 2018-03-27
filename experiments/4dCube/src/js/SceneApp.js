@@ -27,11 +27,16 @@ class SceneApp extends Scene {
 		super();
     // set size
 		this.resize();
+
+    // 阿尔法混合 预乘阿尔法通道的纹理
 		GL.enableAlphaBlending();
+
 		this.orbitalControl.rx.value = 0.3;
 		this.orbitalControl.radius.value = 12;
 		this.orbitalControl.radius.easing = 0.03;
 		this.orbitalControl.lockZoom(true);
+
+    // 初始化场景执行时间
 		this.time = 0;
 
 	}
