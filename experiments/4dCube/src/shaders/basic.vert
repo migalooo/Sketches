@@ -1,5 +1,7 @@
 // basic.vert
 
+// 缺省 - 默认状态下的顶点着色器
+
 precision highp float;
 attribute vec3 aVertexPosition;
 attribute vec2 aTextureCoord;

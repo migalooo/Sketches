@@ -15,6 +15,8 @@ var random = function(min, max) { return min + Math.random() * (max - min);	}
 class View4DCube extends alfrid.View {
 	
 	constructor() {
+    // 初始化link program , 传入fragments vertex shader
+    // 执行 GLShader 构造函数
 		super(vsCube, fsCube);
 
 		this._ease = random( 0.02, 0.05 ) * 0.5;
