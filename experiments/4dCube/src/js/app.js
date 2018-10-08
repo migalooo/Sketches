@@ -50,7 +50,7 @@ function _init() {
 }
 
 
-// not: if has image assets
+// note: if has image assets
 function _onImageLoaded(o) {
 	//	ASSETS
 	console.log('Image Loaded : ', o);

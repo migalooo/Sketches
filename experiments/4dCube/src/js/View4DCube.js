@@ -7,8 +7,10 @@ import fsCube from 'shaders/cube.frag';
 import vsPlane from 'shaders/plane.vert';
 import fsPlane from 'shaders/plane.frag';
 
+// note: 生成三维随机方向 单位向量 
 import getRandomAxis from './utils/getRandomAxis';
 
+// 两个值之间的随机数
 var random = function(min, max) { return min + Math.random() * (max - min);	}
 
 
@@ -19,7 +21,9 @@ class View4DCube extends alfrid.View {
     // 执行 GLShader 构造函数
 		super(vsCube, fsCube);
 
+    // EaseNumber ease 参数
 		this._ease = random( 0.02, 0.05 ) * 0.5;
+
 		this._shaderPlane = new GLShader(vsPlane, fsPlane);
 
 		this._isDirty = true;
@@ -28,6 +32,8 @@ class View4DCube extends alfrid.View {
 
 		this.dimension = vec3.fromValues(1, 1, 1);
 		this._rotation = 0;
+
+    // 随机方向旋转轴
 		this._rotationAxis = getRandomAxis();
 		this._position = vec3.create();
 
@@ -68,8 +74,10 @@ class View4DCube extends alfrid.View {
 
 	_init() {
 		this.mesh = alfrid.Geom.cube(1, 1, 1);
+    // console.log(this.mesh)
 		const s = 2;
 		this.plane = alfrid.Geom.plane(s, s, 1);
+    // console.log(this.plane)
 	}
 
 
